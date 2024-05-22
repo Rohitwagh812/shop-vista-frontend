@@ -1,0 +1,147 @@
+
+
+
+
+.signin-page  .left-side{
+    background-color: #1564C1 ;
+    max-width: 55vw !important;
+}
+
+.signin-page  .left-side .signin-btn{
+   background-color: #E2F2FF !important;
+   color: #1564C1 !important;
+   font-weight: bold !important;
+}
+
+
+.signin-page .right-side{
+    background-color: #1564C1 ;
+    height: 100vh;
+    max-width: 55vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.signin-page .right-side .login-form{
+    display: flex;
+    flex-direction: column; 
+    background-color: #E2F2FF;
+    height: 70vh;
+    width: 30vw;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.signin-page .right-side .login-form p{
+   color: #1564C1 !important;
+   font-weight: 700 !important;  
+}
+
+.signin-page .right-side .login-form label{
+    color: #1564C1 !important;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.signin-page .right-side .login-form input{
+    padding: 5px;
+    border-radius: 12px;
+    border: none !important;
+    text-decoration: none !important;
+    outline: none;
+}
+
+.signin-page .right-side .login-form .login-btn{
+  color: #1564C1!important;
+  background-color: white !important;
+  border: none !important;
+ max-width: 260px;
+  margin: 30px 0 0 35px ;
+}
+
+.signin-page .right-side .login-form .login-span{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    color: #1564C1 !important; 
+    cursor: pointer;
+}
+
+
+.row>* { 
+    padding-right: 0 !important; 
+}
+
+/* signup page */
+.registration-page .left-side{
+    background-color: #1564C1 !important;
+    max-width: 55vw !important;
+}
+
+.registration-page .left-side .signup-btn{
+    background-color: #E2F2FF !important;
+   color: #1564C1 !important;
+   font-weight: bold !important;
+}
+
+.registration-page .right-side{
+    background-color: #1564C1;
+    height: 100vh;
+    max-width: 55vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-page .right-side .signup-form{
+    display: flex;
+    flex-direction: column; 
+    background-color: #E2F2FF;
+    height: 80vh;
+    width: 30vw;
+    padding: 30px;
+    border-radius: 16px;
+} 
+
+.registration-page .right-side .signup-form p{
+    color: #1564C1 !important;  
+    font-weight: 700;
+ }
+ 
+ .registration-page .right-side .signup-form label{
+     color: #1564C1 !important;
+     font-weight: 600;
+     margin: 10px 0;
+ }
+ 
+ .registration-page .right-side .signup-form input{
+     padding: 5px;
+     border-radius: 12px;
+     border: none !important;
+     text-decoration: none !important;
+     outline: none;
+ }
+ 
+ .registration-page .right-side .signup-form .login-btn{
+   color: #1564C1 !important;
+   background-color: #fff !important;
+   max-width: 280px !important;
+   margin: 40px 0 0 35px ;
+   border:  none !important;
+ }
+ 
+ .registration-page .right-side .signup-form .login-span{
+     text-align: center;
+     margin-top: 30px;
+     font-weight: 600;
+     color: #1564C1 !important; 
+     cursor: pointer;
+ }
+ 
+ .signup-btn{
+    padding: 10px 50px;
+    border-radius: 1px;
+    font-weight: 600;
+ }

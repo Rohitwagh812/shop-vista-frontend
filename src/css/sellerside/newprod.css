@@ -1,0 +1,111 @@
+
+
+
+.newprod-page{
+    height: 100vh;
+    width: 100vw;
+}
+
+.newprod-page .left-div{
+    background-color: #E2F2FF; 
+    height: 100vh;
+    padding: 30px 60px;
+    max-width: 45vw;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px black solid;
+    overflow: hidden;
+}
+
+.newprod-page .left-div .inputs{
+    height: 70vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem; 
+    margin-top: 10px;
+}
+
+
+.newprod-page .left-div .inputs input {
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px ;
+}
+
+.newprod-page .left-div .inputs textarea {
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    height: 100px;
+    border-radius: 15px ;
+}
+
+.newprod-page .left-div .inputs .joint-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.newprod-page .left-div .btn-add-prod .btn-prod{
+    padding: 11px 60px ;
+    margin-left: 20px;   
+    background-color: #2067b8 !important;
+    border: none !important;
+    border-radius: 15px ;
+    /* height: 10vh; */
+    font-weight: 700;
+}
+
+.newprod-page .this-right-div{
+    max-height: 100vh;
+    max-width: 50vw;
+}
+
+.newprod-page .this-right-div .top-section {
+    padding: 20px;
+    margin-left: -50px;
+    margin-top: 20px;
+
+}
+ 
+
+.newprod-page .this-right-div .top-section h3{
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px rgba(128, 128, 128, 0.288);
+}
+
+.newprod-page .this-right-div .top-section p {
+    max-width: 28vw;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 30px; 
+}
+  
+.newprod-page .this-right-div .card-div .prod-card{
+    max-width: 15vw;
+    padding: 10px;
+    height: 50vh;
+    overflow: hidden;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center !important;
+    border: none;
+}
+
+.newprod-page .this-right-div .card-div .prod-img{
+    height: 20vh;
+    width: 10vw;
+} 
+
+.newprod-page .card-body { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+}  
+
+

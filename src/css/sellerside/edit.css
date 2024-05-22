@@ -1,0 +1,114 @@
+
+
+
+.edit-page{
+    height: 100vh;
+    width: 100vw;
+}
+
+.edit-page .left-div{
+    background-color: #E2F2FF; 
+    height: 100vh;
+    padding: 30px 60px;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid black;
+}
+
+.edit-page .left-div .inputs{
+    height: 70vh;
+    max-width: 35vw;
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem; 
+    margin-top: 10px;
+}
+
+
+.edit-page .left-div .inputs input {
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px ;
+}
+
+.edit-page .left-div .inputs textarea {
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    height: 100px;
+    border-radius: 15px ;
+}
+
+.edit-page .left-div .inputs .joint-input {
+    display: flex;
+    justify-content: space-between;
+    max-width: 35vw;
+}
+
+.edit-page .left-div .inputs .joint-input input{
+    max-width: 15.9vw !important;
+}
+
+.edit-page .left-div .btn-add-prod .btn-prod{
+    padding: 11px 60px ;
+    margin-left: 20px;   
+    background-color: #fdea60 !important;
+    border: none !important;
+    border-radius: 15px ;
+    color: black !important;
+    font-weight: 700;
+}
+
+
+.edit-page .this-right-div{
+    max-height: 100vh;
+    max-width: 50vw;
+}
+
+.edit-page .this-right-div .top-section {
+    padding: 20px;
+    margin-left: -50px;
+    margin-top: 20px;
+
+}
+ 
+
+.edit-page .this-right-div .top-section h3{
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px rgba(128, 128, 128, 0.288);
+}
+
+.edit-page .this-right-div .top-section p {
+    max-width: 28vw;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 30px; 
+}
+  
+.edit-page .this-right-div .card-div .prod-card{
+    max-width: 15vw;
+    padding: 10px;
+    height: 50vh;
+    overflow: hidden;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center !important;
+    border: none;
+}
+
+.edit-page .this-right-div .card-div .prod-img{
+    height: 20vh;
+    width: 10vw;
+} 
+
+.edit-page .card-body { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+}  

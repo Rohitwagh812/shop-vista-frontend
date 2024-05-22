@@ -1,0 +1,25 @@
+
+.checkout-page{
+    display: flex;
+    height: 80vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-page img{
+    height: 300px;
+    animation: fopimg 3s infinite ;
+}
+
+@keyframes fopimg {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+  }

@@ -1,0 +1,139 @@
+
+
+
+.dash-page{
+    height: 100vh;
+    width: 100vw;
+}
+
+.dash-page .title-btn-div{
+    display: flex;
+    justify-content: space-between;
+    width: 84%;
+    padding: 10px;
+    margin-left: 70px; 
+}
+
+.dash-page .title-btn-div h3{
+    text-shadow: 2px 2px rgba(128, 128, 128, 0.288);
+    font-weight: 800;
+}
+
+.dash-page .title-btn-div .add-new-btn{
+    border: none !important;
+    background-color: #2067b8 !important;
+    padding: 0 40px;
+    border-radius: 16px;
+    font-weight: 700;
+}
+
+.dash-page .right-div-main{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.dash-page .right-div-main .single-product {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border: none !important;
+    overflow: hidden;
+    align-items: center;
+    box-shadow: 10px 10px 10px #00000008;
+}
+
+.dash-page .right-div-main .single-product .imaga-tag{
+    height: 150px;
+    width: 150px; 
+}
+
+ h5 { 
+    font-size: 15px !important;
+    color: #2067b8 !important;
+}
+ 
+h5 span{
+    font-size: 3px !important; 
+    color: green !important;
+}
+
+.h5 {
+    font-size: 17px !important;
+    font-weight: 0 !important;
+    margin: 12px 0 !important;
+}
+
+
+.dash-page .right-div-main .single-product .buttons-div{
+    display: flex;
+    width: 21vw ;
+    justify-content: space-evenly;
+}
+
+.dash-page .right-div-main .single-product .buttons-div .edit-btn{
+    padding: 0 22px;
+    background-color: #2067b8 !important;
+    border: none !important;
+}
+
+.dash-page .right-div-main .single-product .buttons-div .delete-btn{
+    padding: 7px 20px;
+    background-color: red !important;
+    border: none !important;
+}
+
+
+.chart-js{
+    border-right: 2px solid black;
+    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart-js .top-sell{
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.chart-js .top-sell h4{
+    text-shadow: 2px 2px rgba(128, 128, 128, 0.288);
+    font-weight: 800;
+}
+
+.main-chart{
+    height: 40vh !important;
+    width: 30vw !important;
+    margin-left: 55px
+}
+
+canvas {
+    box-sizing: border-box !important;
+    display: block !important;
+    height: 300px !important;
+    width: 308px  !important;
+}
+
+.total{
+    margin-left: -130px;
+    margin-top: 80px;
+}
+
+.total h4{
+    text-shadow: 2px 2px rgba(128, 128, 128, 0.288);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.total h4 .span{ 
+    color: rgba(255, 162, 0, 0.728) !important;
+}
