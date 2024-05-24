@@ -40,9 +40,10 @@ function Home() {
       try{
        await Axios.get('https://shop-vista-backend.onrender.com/home').then(result =>{
           // console.log(result)
-          if(result.data === "The token was not availabe"){
-                // navigate('/')
-          } else if(result.data === "Successs"){
+          // if(result.data === "The token was not availabe"){
+          //       navigate('/')
+          // } else
+           if(result.data === "Successs"){
             navigate('/home')
             console.error("Invalid response:", result.data);
           } else {

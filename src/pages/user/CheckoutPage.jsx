@@ -3,7 +3,7 @@ import checkOut from '../../assets/images/icon/checkout.png'
 import '../../css/cilentside/checkout.css' 
 import axios from 'axios'
 
-
+    
 
 
 function CheckoutPage({userData}) {
@@ -29,7 +29,7 @@ function CheckoutPage({userData}) {
 
   useEffect(() => {
     if (ids && ids.length > 0) {   // Convert the ids array into a comma-separated string
-      axios.get(`https://shop-vista-backend.onrender.com/products/all/${ids}`).then((res) => {
+      axios.get(`https://shop-vista-backend.onrender.com /products/all/${ids}`).then((res) => {
         console.log(res.data);
       }).catch((error) => {
         console.error('Error fetching products:', error);

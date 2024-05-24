@@ -36,24 +36,27 @@ function App() {
 
   const [userData, setUserData] = useState();
 
-  useEffect(() => {
+  // useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('https://shop-vista-backend.onrender.com/current');
-        // console.log(response.data.id)
-        setUserData(response.data.id); 
+        // const response =
+         await axios.get('https://shop-vista-backend.onrender.com/current').then((res)=>{
+              console.log(res)
+              setUserData(res); 
+         })
+        
       } catch (error) {
         console.error('Error fetching user data:', error); 
       }
     };
 
     fetchUserData();
-  }, []); 
+  // }, []); 
 
   useEffect(() =>{
     const getCartProduct = async() =>{
-      await  api.get(`/product/cart/${userData}`).then(res =>{
-          // console.log(res.data.data.length)
+      await  axios.get(`https://shop-vista-backend.onrender.com/product/cart/${userData}`).then(res =>{
+          // console.log(res.data.data)
           setCartItems(res.data.data)
         })
     }
@@ -71,7 +74,7 @@ function App() {
             setUser(true)
             console.error("Invalid response:", result.data);
           } else {
-            navigate('/signin') 
+            // navigate('/signin') 
             setUser(false)
           }
 
@@ -117,6 +120,7 @@ function App() {
         console.error("Error logging out:", error);
     }
 };
+// console.log(userData)
 
   return (
     <div className="app-page" style={{overflow:'hidden'}}>

@@ -17,7 +17,7 @@ function Login() {
   const [email , setEmail] = useState('');
   const [password , setPassword] = useState('');
 
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
   const navigate = useNavigate();
 
   
@@ -28,16 +28,21 @@ function Login() {
          await axios.post('https://shop-vista-backend.onrender.com/signin' , { email:email , password:password })
          .then(result => {
           console.log(result)
-          if(result.data === 'Success'){
-            window.location.reload()
+          if(result.data !== 'Success'){
+            // window.location.reload()
+            alert(result.data)
+            
+            navigate('/signup')
+          }else{
             alert(" Login " + result.data)
             navigate('/home')
-          }else{
-            alert(result.data)
-            // navigate('/signup')
           }
          })
   };
+
+
+  
+
  
  
   return (

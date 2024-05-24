@@ -124,7 +124,7 @@ function Editpage() {
                  </div>
                  <div className="card-div"> 
                  {
-                    title.length === 0  ? (
+                    title.length === 0  || imguri.length === 0 || price.length === 0 || description.length === 0 || discount.length === 0  ? (
                         <div></div>
                     ):(
                         <Card className='prod-card'> 

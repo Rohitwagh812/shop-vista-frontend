@@ -140,6 +140,7 @@ function Product({ cartItem , userData}) {
 };
 
 const [productIds, setProductIds] = useState([]);
+console.log(userData)
 
 
 const addProductToState = (product) => {
@@ -161,9 +162,9 @@ const addProductToState = (product) => {
           };
 
           setCartProduct(updatedCartItem)
-
+          addToCart();
 };
-useEffect(() => {
+// useEffect(() => {
   const addToCart = async () => {
     try {
       const response = await axios.post('https://shop-vista-backend.onrender.com/product/cart', cartProduct);
@@ -172,10 +173,10 @@ useEffect(() => {
       console.error('Error adding item to cart:', error);
     }
   };
-  if (cartProduct.userId && cartProduct.productId && cartProduct.quantity && cartProduct.price) {
-    addToCart(); 
-  }
-}, [ cartProduct ]);
+  // if (cartProduct.userId && cartProduct.productId && cartProduct.quantity && cartProduct.price) {
+  //   addToCart(); 
+  // }
+// }, [ cartProduct ]);
 
 
 
