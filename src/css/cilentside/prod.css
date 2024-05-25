@@ -62,7 +62,7 @@
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    width: 20vw;
+    max-width: 20vw;
 }
 
 
@@ -95,7 +95,7 @@
 .product-page .prod-left-side.col-lg-1 .center .sort-by .form-div .form-select{
     background-color: #b0d9fc !important;
     color: teal !important;
-    width: 200px !important;
+   max-width: 200px !important;
     font-weight: 600 !important;
     background-size: 22px;      
   }
@@ -144,7 +144,7 @@
     flex-wrap: wrap;
     margin: 50px;
     margin-top: -5px !important;
-    height: calc(100vh - 100px);
+    height: 80vh;
     overflow: scroll;
     justify-content: center !important;   
     align-items: center !important;
@@ -208,7 +208,7 @@
 .category{
     margin-top: 20px;
     /* padding: 10px; */
-    width: 220px;
+    max-width: 250px;
 }
 
 
@@ -255,12 +255,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 20vw;
 }
 
 
 .bottom-div .btn-primary{
     background-color: #1564C1;
-    padding: 5px 60px;
+    padding: 10px 50px;
+    max-width: 20vw !important;
     border-radius: 12px;
 }
 

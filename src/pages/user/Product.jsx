@@ -140,7 +140,7 @@ function Product({ cartItem , userData}) {
 };
 
 const [productIds, setProductIds] = useState([]);
-console.log(userData)
+// console.log(userData)
 
 
 const addProductToState = (product) => {
@@ -149,6 +149,8 @@ const addProductToState = (product) => {
   // console.log('hello button click')
 
   // console.log(productIds?._id)
+
+ 
 
   const updatedCartItem = {  
             ...cartItem,
@@ -160,11 +162,11 @@ const addProductToState = (product) => {
             title: product.title,
             category: product.category
           };
-
+          console.log(updatedCartItem)
           setCartProduct(updatedCartItem)
-          addToCart();
+          // addToCart();
 };
-// useEffect(() => {
+useEffect(() => {
   const addToCart = async () => {
     try {
       const response = await axios.post('https://shop-vista-backend.onrender.com/product/cart', cartProduct);
@@ -173,10 +175,10 @@ const addProductToState = (product) => {
       console.error('Error adding item to cart:', error);
     }
   };
-  // if (cartProduct.userId && cartProduct.productId && cartProduct.quantity && cartProduct.price) {
-  //   addToCart(); 
-  // }
-// }, [ cartProduct ]);
+  if (cartProduct.userId && cartProduct.productId && cartProduct.quantity && cartProduct.price) {
+    addToCart(); 
+  }
+}, [ cartProduct ]);
 
 
 
@@ -271,47 +273,13 @@ const addProductToState = (product) => {
                     <Card className='single-product' key={product._id}>
                       <Card.Body>
                       <Card.Img className='imaga-tag' src={product.image} alt={product.title}/>
-                      <Card.Title className='title-text'>{product.title.length > 21 ? product.title.substring(0, 21) + '...' : product.title} </Card.Title>
+                      <Card.Title className='title-text'>{product.title.length > 20 ? product.title.substring(0, 20) + '...' : product.title} </Card.Title>
                       <Card.Text>  
                         <h5 style={{color:'#0277BD'}}>{formatter.format(product.price * 84)} <span>
                           ({product.discount ? ` ${product.discount}` : 'discount Not Applicable'}) </span> </h5>
                       </Card.Text>
                       <Button className='add-to-btn' onClick={() => addProductToState(product)}> Add to cart </Button>
-                      {/* <Button
-                          className='add-to-btn'
-                          style={{ marginTop: 10 }}
-                          onClick={() => {
-                            if (product._id in cartItem) {
-                              const currentItem = cartItem[product.id];
-                              handleAddToCart({
-                                [product.id]: {
-                                  user_id:userData,
-                                  id:product._id,
-                                  image:product.image,
-                                  title: product.title,
-                                  price: product.price,
-                                  category:product.category,
-                                  quantity: currentItem.quantity + 1
-                                }
-                              });
-                            } else {
-                              handleAddToCart({
-                                [product.id]: { 
-                                  user_id:userData,
-                                  id:product._id,
-                                  image:product.image,
-                                  title: product.title,
-                                  category:product.category,
-                                  price: product.price,
-                                  quantity: 1
-                                }
-                              });
-                            }
-                          }}
-                        >
-                          Add To Cart
-                        </Button> */}
-
+                      
                       </Card.Body>
                     </Card>
                   )

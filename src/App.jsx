@@ -35,15 +35,17 @@ function App() {
   const hideNavbarTwo = location.pathname === '/' || location.pathname === '/signin' || location.pathname === '/signup' || location.pathname === '/login' || location.pathname === '/reg'  || location.pathname === '/home' || location.pathname === '/cart'|| location.pathname === '/checkout' || location.pathname == '/prod'
 
   const [userData, setUserData] = useState();
+  
 
-  // useEffect(() => {
+  useEffect(() => {
     const fetchUserData = async () => {
       try {
         // const response =
-         await axios.get('https://shop-vista-backend.onrender.com/current').then((res)=>{
-              console.log(res)
-              setUserData(res); 
-         })
+           const res = await axios.get('https://shop-vista-backend.onrender.com/current', { withCredentials: true })
+         
+              console.log(res.data.id)
+              setUserData(res.data.id); 
+        //  })
         
       } catch (error) {
         console.error('Error fetching user data:', error); 
@@ -51,11 +53,11 @@ function App() {
     };
 
     fetchUserData();
-  // }, []); 
+  }, []); 
 
   useEffect(() =>{
     const getCartProduct = async() =>{
-      await  axios.get(`https://shop-vista-backend.onrender.com/product/cart/${userData}`).then(res =>{
+      await  axios.get(`https://shop-vista-backend.onrender.com/product/cart/${userData}` , { withCredentials: true }).then(res =>{
           // console.log(res.data.data)
           setCartItems(res.data.data)
         })
@@ -67,9 +69,9 @@ function App() {
   useEffect(()=>{
     const handleSubmit = async () =>{
       try{
-       await axios.get('https://shop-vista-backend.onrender.com/home').then(result =>{
+       await axios.get('https://shop-vista-backend.onrender.com/home' , { withCredentials: true }).then(result =>{
           // console.log(result) 
-          if(result.data !== "Successs"){
+          if(result.data === "Success"){
             navigate('/home')
             setUser(true)
             console.error("Invalid response:", result.data);
@@ -95,7 +97,7 @@ function App() {
   // console.log(currentUser)const LogoutButton = () => {
     const handleLogout = async () => {
       try {
-          await axios.post('https://shop-vista-backend.onrender.com/logout');
+          await axios.post('https://shop-vista-backend.onrender.com/logout' , { withCredentials: true });
           alert('user has be logout')
           setUser(false)
       } catch (error) {
@@ -106,7 +108,7 @@ function App() {
 
   const handleLogoutTwo = async () => {
     try {
-        await axios.post('https://shop-vista-backend.onrender.com/seller/logout').then((res)=>{
+        await axios.post('https://shop-vista-backend.onrender.com/seller/logout' , { withCredentials: true }).then((res)=>{
           console.log(res.data)
           if(res.data.message === 'Logged out successfully'){
             navigate('/login')

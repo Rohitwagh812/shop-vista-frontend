@@ -25,17 +25,18 @@ function Login() {
   const handleLogin = async  (e) => {
     e.preventDefault();
     // try {
-         await axios.post('https://shop-vista-backend.onrender.com/signin' , { email:email , password:password })
+         await axios.post('https://shop-vista-backend.onrender.com/signin' , { email:email , password:password }, { withCredentials: true })
          .then(result => {
           console.log(result)
-          if(result.data !== 'Success'){
-            // window.location.reload()
+          if(result.data === 'Success'){
+            window.location.reload()
             alert(result.data)
-            
-            navigate('/signup')
+            navigate('/home')
+
+            // navigate('/signup')
           }else{
             alert(" Login " + result.data)
-            navigate('/home')
+            // navigate('/signup')
           }
          })
   };
