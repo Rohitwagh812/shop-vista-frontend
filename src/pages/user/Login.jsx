@@ -29,7 +29,7 @@ function Login() {
          .then(result => {
           console.log(result)
           if(result.data === 'Success'){
-            window.location.reload()
+            // window.location.reload()
             alert(result.data)
             navigate('/home')
 
