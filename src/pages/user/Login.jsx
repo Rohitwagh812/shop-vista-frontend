@@ -28,7 +28,7 @@ function Login() {
          await axios.post('https://shop-vista-backend.onrender.com/signin' , { email:email , password:password }, { withCredentials: true })
          .then(result => {
           console.log(result)
-          if(result.data === 'Success'){
+          if(result.data !== 'Success'){
             // window.location.reload()
             alert(result.data)
             navigate('/home')
