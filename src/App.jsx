@@ -71,7 +71,7 @@ function App() {
       try{
        await axios.get('https://shop-vista-backend.onrender.com/home' , { withCredentials: true }).then(result =>{
           // console.log(result) 
-          if(result.data === "Success"){
+          if(result.data !== "Success"){
             navigate('/home')
             setUser(true)
             console.error("Invalid response:", result.data);
